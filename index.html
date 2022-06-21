@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/js" src="index.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <title>Text App</title>
+</head>
+<body>
+    <h3>Type anything you want below and it will reveal what i wanted to say after all this time....</h3>
+    <input id='input' type="text" placeholder="Leah, please type in here"></input>
+    <button class="button" onclick="getText()">Translate Text</button>
+  <h1 id="input-text"></h1>
+  <h3 class="hidden" id= 'extra-para'></h3>
+</body>
+<script>
+    const getText = () => {
+        const text = document.getElementById('input').value
+        if(text.length > 0){
+       document.getElementById('input-text').innerHTML = 'I Love You'
+       document.getElementById('extra-para').classList.add('visible')
+       document.getElementById('extra-para').innerHTML = 'This was a long way to go about this but you wont tell me yourself so i figured id have a little fun with it...perks of dating a software engineer right? It also wont matter what you type. it will say the same thing'
+       setTimeout(() => {
+        document.getElementById('extra-para').classList.remove('visible')
+        document.getElementById('input-text').innerHTML = ''
+        document.getElementById('extra-para').innerHTML =  ''
+       }, 7000)
+    } else {
+        null
+    }
+    }
+
+</script>
+</html>
